@@ -13,6 +13,7 @@ export function App() {
 
     return (
         <div className={styles.App}>
+            <h1 className={styles.logo}>ANTI-CROWD</h1>
             <Search onInput={setSearchPhrase} value={searchPhrase}/>
             <Recent onPlaceClicked={(place) => {
                 setSelectedPlace(place)
