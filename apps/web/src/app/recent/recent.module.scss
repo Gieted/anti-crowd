@@ -1,16 +1,40 @@
 .Recent {
-  height: 800px;
-  width: 800px;
+  height: 1000px;
+  width: 600px;
   display: flex;
   font-family: 'Roboto', sans-serif;
 }
 
 .title {
   margin-left: 30px;
+  font-weight: 900;
+  font-size: 52px;
+  margin-bottom: 40px;
 }
 
 .placeTexts {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.crowdPercentage {
+  font-size: 27px;
+}
+
+.placeType {
+  opacity: 50%;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.placeName {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.crowdIcon {
+  justify-self: flex-end;
 }
 
 .placePicture {
@@ -28,5 +52,9 @@
   align-items: center;
   height: 74px;
   margin-bottom: 50px;
-  margin-left: 20px;
+  justify-content: space-between;
+}
+
+.button {
+  width: 100%;
 }

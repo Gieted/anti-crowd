@@ -1,6 +1,20 @@
 .App {
   background-color: #E0E0E0;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.placeViewEnterActive {
+  transform: translate(0, 0) !important;
+  transition: transform 300ms;
+}
+
+.placeViewEnter {
+  transform: translate(0, 100%);
+}
+
+.placeViewExitActive {
+  transform: translate(0, 100%) !important;
+  transition: transform 300ms;
+}
