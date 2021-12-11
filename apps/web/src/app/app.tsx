@@ -1,12 +1,11 @@
-import styles from './app.module.scss';
-import NxWelcome from './nx-welcome';
+import styles from './app.module.scss'
+import Recent from "./recent/recent";
 
 export function App() {
   return (
-    <>
-      <NxWelcome title="web" />
-      <div />
-    </>
+    <div className={styles.App}>
+      <Recent/>
+    </div>
   );
 }
 

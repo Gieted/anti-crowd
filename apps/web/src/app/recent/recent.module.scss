@@ -1,0 +1,32 @@
+.Recent {
+  height: 800px;
+  width: 800px;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  margin-left: 30px;
+}
+
+.placeTexts {
+  display: flex;
+}
+
+.placePicture {
+  max-height: 75px;
+  max-width: 75px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  border-radius: 100%;
+}
+
+.place {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 74px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
