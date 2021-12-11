@@ -11,7 +11,7 @@ import CrowdIcon from "../crowd-icon/crowd-icon";
 /* eslint-disable-next-line */
 export interface RecentProps {
     onPlaceClicked: (place: Place) => void
-    searchPhrase: string | null
+    searchPhrase: string | undefined
 }
 
 const data = [
@@ -52,12 +52,14 @@ const StyledButton = styled(Button)({
 })
 
 export function Recent(props: RecentProps) {
+    const searchPhrase = props.searchPhrase ? props.searchPhrase : ''
+    
     return (
         <div className={styles.Recent}>
             <Card>
                 <div className={styles.title}>Miejsca</div>
                 <ul>
-                    {data.map(place => (
+                    {data.filter(it => it.name.toLowerCase().includes(searchPhrase.toLowerCase())).map(place => (
                         <div className={styles.place}>
                             <StyledButton className={styles.button} onClick={() => props.onPlaceClicked(place)}>
                                 <img src={place.picture} className={styles.placePicture}/>

@@ -9,11 +9,11 @@ import {Place} from "./place";
 export function App() {
     const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
     const [showPlaceView, setShowPlaceView] = useState(false);
-    const [searchPhrase, setSearchPhrase] = useState<string | null>(null);
+    const [searchPhrase, setSearchPhrase] = useState<string | undefined>(undefined);
 
     return (
         <div className={styles.App}>
-            <Search/>
+            <Search onInput={setSearchPhrase} value={searchPhrase}/>
             <Recent onPlaceClicked={(place) => {
                 setSelectedPlace(place)
                 setShowPlaceView(true)
