@@ -34,8 +34,10 @@ export function PlaceView(props: PlaceViewProps) {
                 return '21:00'
             case 3:
                 return '22:00'
-            default:
+            case 4:
                 return '23:00'
+            default:
+                return '00:00'
         }
     }
     
